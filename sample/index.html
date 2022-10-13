@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+<!-- <button><a href = "./Admin/AdminLogin.jsp">Register</a></button> -->
+<button><a href = "./Admin/admin.html">Admin Login</a></button>
+<button><a href = "/Doctors">Doctor Login</a></button>
+<button><a href = "./appointment.jsp">patients Login</a></button>
+
+
+<script>
+	(()=>{
+		if(window.localStorage){
+			if(!localStorage.getItem('reload')){
+				localStorage['reload'] = true
+				window.location.reload();
+			}
+			else{
+				localStorage.removeItem('reload');
+			}
+		}
+	})();
+</script> 
+
+</body>
+</html>

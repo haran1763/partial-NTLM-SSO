@@ -1,0 +1,74 @@
+<html>
+<head>
+<link rel="stylesheet" href="index.css">
+</head>
+<body >
+<header>
+<h1>Medicare System....</h1>
+<nav>
+<form action="/sample/operations/display.jsp">
+<input type="hidden" name="tname" value="hospitals" />
+<input type="submit" id="button" value="Display Hospitals" />
+</form>
+
+<form action="/sample/operations/display.jsp">
+<input type="hidden" name="tname" value="doctors" />
+<input type="submit" id="button" value="Display doctors" />
+</form>
+
+<form action="/sample/operations/create.jsp">
+<input type="submit" id="button" value="Create doctors" />
+</form>
+
+<form action="./operations/createho.jsp">
+<input type="submit" id="button" value="Create hospitals" />
+</form>
+
+<form action="/sample/operations/updateho.jsp">
+<input type="submit" id="button" value="Update hospitals" />
+</form>
+
+<form action="/sample/operations/update.jsp">
+<input type="submit" id="button" value="Update doctors" />
+</form>
+
+<form action="/sample/operations/deleteho.jsp">
+<input type="submit" id="button" value="Delete hospitals" />
+</form>
+
+<form action="/sample/operations/delete.jsp">
+<input type="submit" id="button" value="Delete doctors" />
+</form>
+
+</nav>
+</header>
+
+
+
+
+<div>
+	<h2>Welcome Admin....Feel Free To Work With Your App.....</h2>
+	<form action="/sample/logout">
+		<input type="submit" name="logout" value="Logout" />
+	</form>
+</div>
+<script>
+
+
+	(()=>{
+		if(window.localStorage){
+			if(!localStorage.getItem('reload')){
+				localStorage['reload'] = true
+				window.location.reload();
+			}
+			else{
+				localStorage.removeItem('reload');
+			}
+		}
+	})();
+	
+</script> 
+
+
+</body>
+</html>

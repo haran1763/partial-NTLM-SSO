@@ -1,0 +1,34 @@
+# To use this example edit the properties.path init-param in the web.xml
+#
+# This example HttpSecurityService properties file uses the
+# NtlmSecurityProvider to authenticate and authorize clients with an Active
+# Directory authority.
+#
+# Note: This is the equivalent of example_ntlm_web.xml but loaded
+# indirectly with the HttpSecurityService properties.path property in
+# the web.xml.
+
+provider.classname = jespa.ntlm.NtlmSecurityProvider
+http.parameter.username.name = username
+http.parameter.password.name = password
+http.parameter.logout.name = logout
+#http.parameter.anonymous.name = anon
+fallback.location = /jespa/Login.jsp
+excludes = /Login.jsp
+#groups.allowed = BUSICORP\\Domain Admins
+
+#
+# NtlmSecurityProvider properties
+#
+jespa.log.path = C:/Users/spartan/Desktop/jespa.log
+jespa.log.level = 4
+jespa.account.canonicalForm = 3
+
+# Replace the following with properties determined in Step 1 of Installation
+
+jespa.bindstr = LDAP://HealthSystem.local/DC=HealthSystem,DC=local
+jespa.dns.servers = 192.168.56.102
+#jespa.dns.site = Default-First-Site-name
+jespa.service.acctname = hari$@HealthSystem.local
+jespa.service.password = Spartan@1763
+
